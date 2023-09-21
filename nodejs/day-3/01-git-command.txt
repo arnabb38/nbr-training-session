@@ -1,6 +1,6 @@
 Git Download Link (Windows): https://git-scm.com/download/win
 
-Git Configuaration:
+Git Configuration:
 
     git config --global user.name "USERNAME"
 
