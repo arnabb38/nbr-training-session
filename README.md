@@ -1,4 +1,8 @@
-# nbr-training-session
+# NBR Training Session
+
+## Training Outline
+
+![Training Outline](docs/NBR_Training_Outline.png)
 
 ## Node.js
 
@@ -8,5 +12,6 @@
 - Git Download Link (Windows): https://git-scm.com/download/win
 - GitHub Link: https://github.com/
 
-
 ## Angular
+
+- Angular Documentation: https://angular.io/guide/what-is-angular
