@@ -1,3 +1,36 @@
 
+<!-- <p>Name: {{ myName }}</p>
+<p>Age: {{ age }}</p>
+<p>Date of Birth : {{ dateOfBirth }}</p> -->
 
-{{ title }}
+<p>Product Name: {{ product.name }}</p>
+<p>Price: {{ '$'+ product.price }}</p>
+<p>Color: {{ product.color }}</p>
+<p>Discounted Price: {{ getDiscountedPrice() }}</p>
+<p>{{ product.inStock > 0 ? 'Item available': 'Not available' }}</p>
+
+
+  <table class="table table-success table-striped-columns table-hover w-50">
+    <tbody>
+      <tr>
+        <td>Product Name: </td>
+        <td>{{ product.name }}</td>
+      </tr>
+      <tr>
+        <td>Price: </td>
+        <td>{{ 'BDT'+ product.price }}</td>
+      </tr>
+      <tr>
+        <td>Color: </td>
+        <td>{{ product.color }}</td>
+      </tr>
+      <tr>
+        <td>Discounted Price:</td>
+        <td>{{ getDiscountedPrice() }}</td>
+      </tr>
+      <tr>
+        <td>In Stock</td>
+        <td>{{ product.inStock > 0 ? 'Item available': 'Not available' }}</td>
+      </tr>
+    </tbody>
+  </table>
