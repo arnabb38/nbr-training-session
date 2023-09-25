@@ -2,6 +2,8 @@
 <!-- <p>Name: {{ myName }}</p>
 <p>Age: {{ age }}</p>
 <p>Date of Birth : {{ dateOfBirth }}</p> -->
+<!--
+<div class="container">
 
 <p>Product Name: {{ product.name }}</p>
 <p>Price: {{ '$'+ product.price }}</p>
@@ -34,3 +36,38 @@
       </tr>
     </tbody>
   </table>
+
+  <table class="table table-success table-striped-columns table-hover">
+    <thead style="background-color: green; padding: 5px;">
+      <th>Name</th>
+      <th>Age</th>
+      <th>Occupation</th>
+      <th>Email</th>
+      <th>Location</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of personList">
+        <td>{{ person.name }}</td>
+        <td>{{ person.age }}</td>
+        <td>{{ person.occupation }}</td>
+        <td>{{ person.email }}</td>
+        <td>{{ person.location }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-success" (click)="onClick()">Click me</button>
+
+  <div [hidden]="display">
+    display this content
+  </div>
+
+  <input type="text" (input)="searchEvent($event)">
+  <span>Search Value : {{ searchText }}</span>
+
+ <input type="text" [(ngModel)]="inputValue">
+ <span>Search Value : {{ inputValue }}</span>
+
+</div> -->
+
+<app-container></app-container>
