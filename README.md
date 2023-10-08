@@ -15,3 +15,7 @@
 ## Angular
 
 - Angular Documentation: https://angular.io/guide/what-is-angular
+
+## To Install Packages
+
+- npm install "hapi-auto-route"

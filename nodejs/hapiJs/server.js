@@ -1,29 +1,27 @@
 'use strict';
 
 const Hapi = require('@hapi/hapi');
+const Path = require('path');
 
 const init = async () => {
 
     const server = Hapi.server({
         port: 3000,
         host: '127.0.0.1',
+        // host: '172.24.79.155',
+        routes: {
+            cors: {
+                origin: ["*"],
+            },
+        },
     });
 
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: function (request, response) {
-            return "Welcome to NBR Training Session"
+    await server.register({
+        plugin: require("hapi-auto-route"),
+        options: {
+            routes_dir: Path.join(__dirname, "routes"),
         }
-    })
-
-    server.route({
-        method: 'GET',
-        path: '/api/v1/user',
-        handler: function (request, response) {
-            return "From /api/v1/user"
-        }
-    })
+    });
 
     await server.start();
     console.log('Server running on %s', server.info.uri);
