@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^21.3.2",
-    "hapi-auto-route": "^3.0.4"
+    "hapi-auto-route": "^3.0.4",
+    "hapi-rate-limit": "^7.1.0",
+    "json-server": "^0.17.4"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
