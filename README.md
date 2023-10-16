@@ -36,22 +36,26 @@ fs.readFile("users.json", function(err, data) {
 
 
 
-options: {
-            enabled: true,
-            pathLimit: 2,
-            pathCache: {
-                expiresIn: 10000
-            }
-        }
+        console.log(dbConfig)
+
+        const client = new Client(dbConfig)
+
+        await client.connect()
+
+        const result = await client.query('SELECT NOW()')
+        console.log(result.rows)
+
+        await client.end()
 
 
-            await server.register({
-        plugin: require('hapi-rate-limit'),
-        options: {
-            enabled: true,
-            pathLimit: 2,
-            pathCache: {
-                expiresIn: 10000
-            }
-        }
-    });
+        {
+    "user": "postgres",
+    "host": "localhost",
+    "database": "nbrtraining",
+    "password": "postgres",
+    "port": "5432"
+}
+
+
+const { Client } = require("pg")
+const dbConfig = require("../db.config.json")
