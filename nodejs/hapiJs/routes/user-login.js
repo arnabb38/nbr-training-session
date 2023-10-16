@@ -1,8 +1,10 @@
 "use strict";
 
+const { API } = require("../utils/routes")
+
 const user_login = {
     method: 'POST',
-    path: '/api/v1/security/login',
+    path: API.USER_LOGIN,
     handler: function (request, response) {
         let userIdFromDB = 'arnab';
         let passwordFromDB = 'arnab1234';

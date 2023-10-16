@@ -1,8 +1,10 @@
 "use strict";
 
+const { API } = require("../utils/routes")
+
 const get_user_details = {
     method: 'GET',
-    path: '/api/v1/user/details',
+    path: API.GET_USER_DETAILS,
     handler: function (request, response) {
 
         let userId = request.query.userId;
