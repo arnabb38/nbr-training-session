@@ -18,5 +18,13 @@
 
 ## To Install Packages
 
-- npm install "hapi-auto-route"
+- npm install -g nodemon
+- npm install @hapi/hapi
+- npm install hapi-auto-route
+- npm install hapi-rate-limit
 - npm install pg
+
+## Install Software
+
+- dBeaver: https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe
+- Postgres: https://sbp.enterprisedb.com/getfile.jsp?fileid=1258655
