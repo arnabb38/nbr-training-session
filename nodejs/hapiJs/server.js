@@ -26,7 +26,7 @@ const init = async () => {
         plugin: require("hapi-rate-limit"),
         options: {
             enabled: true,
-            pathLimit: 2,
+            pathLimit: 20,
             pathCache: {
                 expiresIn: 1000 * 20 // milliseconds
             }

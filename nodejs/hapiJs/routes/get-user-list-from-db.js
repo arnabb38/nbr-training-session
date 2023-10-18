@@ -4,17 +4,12 @@ const { API } = require("../utils/routes")
 const dbConfig = require("../utils/db.config.json")
 const { Client } = require("pg")
 
-const user_login = {
-    method: 'POST',
-    path: API.USER_LOGIN_WITH_DB,
+const get_user_list = {
+    method: 'GET',
+    path: API.GET_USER_LIST_FROM_DB,
     handler: async function (request, response) {
-
-        let userId = request.payload.userId;
-        let password = request.payload.password;
-
         try {
-
-            let querySql = `select * from login where userId = '${userId}' and password = '${password}'`;
+            let querySql = `select id, userid, username from login`;
 
             const client = new Client(dbConfig);
 
@@ -30,14 +25,14 @@ const user_login = {
                 return {
                     status: true,
                     code: 200,
-                    message: `User Login Successful`,
+                    message: `Successfully Get User List`,
                     data: result
                 }
             } else {
                 return {
                     status: false,
                     code: 400,
-                    message: `Invalid UserID or Password`
+                    message: `No Record Found`
                 }
             }
         } catch (err) {
@@ -47,4 +42,4 @@ const user_login = {
     }
 }
 
-module.exports = user_login;
+module.exports = get_user_list;
