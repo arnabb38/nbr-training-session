@@ -20,7 +20,6 @@ export class HomeComponent {
   getProductList() {
     this.http.get('https://dummyjson.com/products').subscribe((res: any) => {
       this.productList = res.products;
-      console.log(this.productList)
     });
   }
 }
