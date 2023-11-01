@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/login' },
   { path: 'login', component: LoginComponent },
   {
-    path: 'dashboard', loadChildren: () => import('./pages/layout/layout.module').then(m => m.LayoutModule)
-  }
+    path: '', loadChildren: () => import('./pages/layout/layout.module').then(m => m.LayoutModule)
+  },
+  { path: '**', pathMatch: 'full', redirectTo: '/login' },
 
 ];
 
