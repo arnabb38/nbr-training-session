@@ -24,6 +24,12 @@
           <span class="nav-text">Users</span>
         </span>
       </li>
+      <li nz-menu-item routerLink="/users" [routerLinkActive]="'ant-menu-item-selected'">
+        <span title>
+          <i nz-icon [nzType]="'logout'" [nzTheme]="'outline'"></i>
+          <span class="nav-text" (click)="logout()">Logout</span>
+        </span>
+      </li>
       <!-- <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
         <ul>
           <li nz-menu-item nzMatchRouter>

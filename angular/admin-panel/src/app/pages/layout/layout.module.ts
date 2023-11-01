@@ -23,6 +23,7 @@ import { UsersComponent } from '../users/users.component';
     NzMenuModule,
     IconsProviderModule,
     LayoutRoutingModule
-  ]
+  ],
+  providers: []
 })
 export class LayoutModule { }

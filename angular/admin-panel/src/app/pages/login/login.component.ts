@@ -20,9 +20,9 @@ export class LoginComponent {
 
   doLogin() {
     this.http.post('http://127.0.0.1:3000/api/v1/security/login-with-db', this.login).subscribe((res: any) => {
-        console.log(res)
         if(res.code === 200) {
-            this.router.navigate(['/'])
+          localStorage.setItem('nbr.pmis.auth', '11');
+          this.router.navigate(['/'])
         } else {
           alert(res.message)
         }
