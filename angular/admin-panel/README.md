@@ -20,3 +20,6 @@ npm run start
 
 ###
 ng g m layout
+
+
+npm i --save-dev @types/uuid

@@ -11,23 +11,23 @@
         <h1>NBR Admin Panel</h1>
       </a>
     </div>
-    <ul nz-menu nzTheme="light" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-menu-item routerLink="/" [routerLinkActive]="'ant-menu-item-selected'">
+    <ul nz-menu nzTheme="light" nzMode="inline"  [nzInlineCollapsed]="isCollapsed">
+      <li nz-menu-item routerLink="/" nzMatchRouter [routerLinkActive]="'ant-menu-item-selected'">
         <span title>
           <i nz-icon [nzType]="'dashboard'" [nzTheme]="'outline'"></i>
           <span class="nav-text">Dashboard</span>
         </span>
       </li>
-      <li nz-menu-item routerLink="/users" [routerLinkActive]="'ant-menu-item-selected'">
+      <li nz-menu-item routerLink="/users" nzMatchRouter [routerLinkActive]="'ant-menu-item-selected'">
         <span title>
           <i nz-icon [nzType]="'user'" [nzTheme]="'outline'"></i>
           <span class="nav-text">Users</span>
         </span>
       </li>
-      <li nz-menu-item routerLink="/users" [routerLinkActive]="'ant-menu-item-selected'">
+      <li nz-menu-item nzMatchRouter (click)="logout()">
         <span title>
           <i nz-icon [nzType]="'logout'" [nzTheme]="'outline'"></i>
-          <span class="nav-text" (click)="logout()">Logout</span>
+          <span class="nav-text" >Logout</span>
         </span>
       </li>
       <!-- <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">

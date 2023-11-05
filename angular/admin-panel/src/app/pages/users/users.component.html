@@ -1,1 +1,19 @@
-<p>users works!</p>
+
+<button nz-button nzType="primary" routerLink="/users/add-new">Add User</button>
+
+<nz-table #basicTable [nzData]="data">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>UserId</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{data.id}}</td>
+      <td>{{data.userid}}</td>
+      <td>{{data.username}}</td>
+    </tr>
+  </tbody>
+</nz-table>
