@@ -27,9 +27,7 @@ export class AddNewComponent {
       id,
       ...this.userForm.value
     }
-
-
-    this.http.post(APIEndpoint.base_url + APIEndpoint.USER_REGISTRATION, payload).subscribe((res: any) => {
+   this.http.post(APIEndpoint.base_url + APIEndpoint.USER_REGISTRATION, payload).subscribe((res: any) => {
         if(res.code === 200) {
           this.userForm.reset();
           this.notification.success('', res.message)

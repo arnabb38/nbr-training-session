@@ -1,7 +1,7 @@
 
 <button nz-button nzType="primary" routerLink="/users/add-new">Add User</button>
 
-<nz-table #basicTable [nzData]="data">
+<nz-table #nzTable [nzData]="userList">
   <thead>
     <tr>
       <th>id</th>
@@ -10,10 +10,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let data of basicTable.data">
-      <td>{{data.id}}</td>
-      <td>{{data.userid}}</td>
-      <td>{{data.username}}</td>
+    <tr *ngFor="let d of nzTable.data">
+      <td>{{d.id}}</td>
+      <td>{{d.userid}}</td>
+      <td>{{d.username}}</td>
     </tr>
   </tbody>
 </nz-table>

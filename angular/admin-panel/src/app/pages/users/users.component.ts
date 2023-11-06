@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { APIEndpoint } from '../../core/constants/api-endpoint';
 
 @Component({
   selector: 'app-users',
@@ -8,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsersComponent implements OnInit {
 
-  data: any = [];
+  userList: any = [];
   constructor(private  http : HttpClient) {
   }
 
@@ -19,9 +20,9 @@ export class UsersComponent implements OnInit {
 
 
   getUserList() {
-    this.http.get('http://localhost:3000/api/v1/security/get-user-list').subscribe((res: any) => {
+    this.http.get(APIEndpoint.base_url + APIEndpoint.USER_LIST).subscribe((res: any) => {
       console.log(res)
-      this.data = res.data;
+      this.userList = res.data;
     })
   }
 
